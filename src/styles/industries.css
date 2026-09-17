@@ -1,0 +1,578 @@
+/* =========================================
+   INDUSTRIES SECTION
+========================================= */
+
+.industries-section {
+    position: relative;
+
+    padding: 90px 0;
+
+    background: var(--bg-light);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.industries-header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 45px;
+}
+
+
+.industries-heading {
+    max-width: 650px;
+}
+
+
+.industries-heading .section-subtitle {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--primary-color);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+
+.industries-title {
+    margin: 0;
+
+    color: var(--heading-color);
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+
+.industries-title span {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   HEADER RIGHT
+========================================= */
+
+.industries-header-right {
+    max-width: 330px;
+}
+
+
+.industries-header-right p {
+    margin: 0 0 15px;
+
+    color: var(--text-color);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.industries-view-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--heading-color);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.industries-view-link:hover {
+    color: var(--primary-color);
+}
+
+
+.industries-view-link span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 50%;
+
+    transition: var(--transition);
+}
+
+
+.industries-view-link:hover span {
+    border-color: var(--primary-color);
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    transform: translate(2px, -2px);
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.industries-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 14px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.industry-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 210px;
+
+    padding: 25px 15px;
+
+    border: 1px solid rgba(99, 91, 255, 0.04);
+
+    background: var(--primary-light);
+
+    color: var(--heading-color);
+
+    overflow: hidden;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Different soft tones */
+
+.industry-card:nth-child(2),
+.industry-card:nth-child(5),
+.industry-card:nth-child(8) {
+    background: rgba(99, 91, 255, 0.035);
+}
+
+
+.industry-card:nth-child(3),
+.industry-card:nth-child(6),
+.industry-card:nth-child(9) {
+    background: rgba(99, 91, 255, 0.055);
+}
+
+
+.industry-card:nth-child(4),
+.industry-card:nth-child(7),
+.industry-card:nth-child(10) {
+    background: rgba(99, 91, 255, 0.025);
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.industry-card:hover {
+    z-index: 2;
+
+    background: var(--white-color);
+
+    border-color: rgba(99, 91, 255, 0.15);
+
+    color: var(--heading-color);
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 45px rgba(35, 25, 80, 0.08);
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.industry-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    right: -80px;
+    bottom: -80px;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+
+    opacity: 0;
+
+    transition: var(--transition-slow);
+}
+
+
+.industry-card:hover::before {
+    width: 220px;
+    height: 182px;
+   /*height: 220px;*/  
+    opacity: 1;
+}
+.industry-card:hover .industry-card-icon {
+    background: #fff;
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.industry-card-number {
+    position: absolute;
+
+    top: 15px;
+    left: 17px;
+
+    color: rgba(30, 30, 40, 0.22);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    transition: var(--transition);
+}
+
+
+.industry-card:hover .industry-card-number {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.industry-card-icon {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 75px;
+
+    margin-bottom: 22px;
+    background: var(--primary-light);
+}
+
+
+.industry-card-icon img {
+    width: 68px;
+    height: 68px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.35s ease;
+         mix-blend-mode: multiply;
+}
+
+
+.industry-card:hover .industry-card-icon img {
+    transform: translateY(-4px) scale(1.06);
+}
+
+
+/* Bootstrap fallback */
+
+.industry-card-icon i {
+    color: var(--primary-color);
+
+    font-size: 38px;
+
+    transition: var(--transition);
+}
+
+
+.industry-card:hover .industry-card-icon i {
+    transform: translateY(-4px) scale(1.08);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.industry-card-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.industry-card-content h3 {
+    margin: 0;
+
+    color: var(--heading-color);
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.industry-card-arrow {
+    position: absolute;
+
+    right: 14px;
+    bottom: 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid rgba(30, 30, 40, 0.08);
+
+    border-radius: 50%;
+
+    color: var(--muted-color);
+
+    font-size: 10px;
+
+    opacity: 0;
+
+    transform: translate(5px, 5px);
+
+    transition: var(--transition);
+}
+
+
+.industry-card:hover .industry-card-arrow {
+    opacity: 1;
+
+    border-color: var(--primary-color);
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    transform: translate(0, 0);
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.industries-bottom {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    color: var(--muted-color);
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+
+.industries-bottom-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--border-color);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1199px) {
+
+    .industries-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .industries-section {
+        padding: 75px 0;
+    }
+
+    .industries-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .industries-header-right {
+        max-width: 550px;
+    }
+
+    .industries-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .industries-section {
+        padding: 65px 0;
+    }
+
+    .industries-title {
+        font-size: 30px;
+    }
+
+    .industries-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .industry-card {
+        min-height: 185px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .industries-title {
+        font-size: 27px;
+    }
+
+    .industries-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .industry-card {
+        min-height: 170px;
+
+        padding: 20px 10px;
+    }
+
+    .industry-card-icon {
+        width: 60px;
+        height: 60px;
+
+        margin-bottom: 16px;
+    }
+
+    .industry-card-icon img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .industry-card-icon i {
+        font-size: 30px;
+    }
+
+    .industry-card-content h3 {
+        font-size: 16px;
+    }
+
+    .industry-card-arrow {
+        display: none;
+    }
+
+    .industries-bottom {
+        display: none;
+    }
+
+}
